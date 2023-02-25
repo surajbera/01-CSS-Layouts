@@ -6,21 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flexbox</title>
     <style>
+      .el {
+        margin: 0 100px 0 0;
+      }
+      .el:last-child {
+        margin: 0
+      }
       .el--1 {
         background-color: blueviolet;
+        align-self: flex-start;
+        /* order: 1; */
       }
       .el--2 {
         background-color: orangered;
       }
       .el--3 {
         background-color: green;
-        height: 150px;
+        height: 250px;
       }
       .el--4 {
         background-color: goldenrod;
       }
       .el--5 {
         background-color: palevioletred;
+        align-self: stretch;
       }
       .el--6 {
         background-color: steelblue;
@@ -30,8 +39,8 @@
       }
       .el--8 {
         background-color: crimson;
+        /* order: -1; */
       }
-
       .container {
         /* STARTER */
         font-family: sans-serif;
@@ -40,6 +49,10 @@
         margin: 40px;
 
         /* FLEXBOX */
+        display:flex;
+        align-items: center;
+        justify-content:space-between;
+        flex-wrap:wrap;
       }
     </style>
   </head>
